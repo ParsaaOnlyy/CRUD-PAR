@@ -41,6 +41,7 @@ namespace CRUD
 
         public Mapel()
         {
+            InitializeComponent();
             Tampil();
             MySqlDataAdapter adp = new MySqlDataAdapter("select * from guru", Koneksi.conn);
             DataTable dt = new DataTable();
@@ -49,8 +50,6 @@ namespace CRUD
             cbnamaguru.DataSource = dt;
             cbnamaguru.DisplayMember = "nama";
             cbnamaguru.ValueMember = "id";
-
-            InitializeComponent();
         }
 
         private void Clear()
@@ -84,11 +83,7 @@ namespace CRUD
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            panel3.Visible = false;
-            Mapel FormAktif = new Mapel();
-
-            FormAktif.MdiParent = this;
-            FormAktif.Show();
+            dgMapel.Visible = false;
             label1.Text = "Kelola Data Mata Pelajaran";
 
         }

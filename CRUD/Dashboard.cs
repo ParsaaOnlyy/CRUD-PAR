@@ -269,21 +269,9 @@ namespace CRUD
 
         private void btLogout_Click(object sender, EventArgs e)
         {
-            new Login().Show();
+            new login().Show();
             this.Hide();
 
-        }
-    }
-
-    internal class Login
-    {
-        public Login()
-        {
-        }
-
-        internal void Show()
-        {
-            throw new NotImplementedException();
         }
     }
 }
